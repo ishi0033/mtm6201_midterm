@@ -1,0 +1,382 @@
+
+body {
+    background-color: #000;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: black;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Playfair Display', serif;
+}
+/* h1 Stripe */
+.stripe {
+    position: relative; 
+}
+
+ .stripe::after {
+    position: absolute; 
+    content: "";
+    left: 50%; 
+    top: 50%;
+    height: 13px; 
+    right: 0; 
+    bottom: 10px;
+    transform: translate(-50%,-50%);
+    background-color:  rgb(191, 18, 33);
+    z-index: -1;  
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 70px;
+    padding: 0.5em;
+    transition: transform 1s;
+}
+.nav-links li a:hover {
+background: #1eaaaf;
+transform: scale(1.3);
+}
+
+.contact-btn {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition:  transform 1s;
+}
+
+.contact-btn:hover {
+    background-color: #1e40af;
+    transform: scale(1.3);
+}
+
+/* Hero Section */
+.milky {
+    border-radius: 50px;    
+    overflow: hidden;
+    position: relative;
+}
+.milky img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    border-bottom: 2px solid #444;
+    animation: zoom 8s infinite ease-in-out alternate; /* Applies the animation */
+    display: block;
+}
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
+
+.hero {
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    transform: translateY(-50%);
+    text-align:  left;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 5;
+}
+.hero-content .subheading {
+    position: relative;
+    font-size: 14px;
+    color: #bbb;
+}
+
+.hero-content h2 {
+    position: relative;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.solar-text {
+    color: #60a5fa;
+}
+
+
+.description {
+    font-size: 18px;
+    color: #bbb;
+}
+
+/* Planet Section */
+.locals {
+    padding: 50px 20px;
+    text-align: left;
+}
+
+.locals h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.planet-grid {
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.planet {
+    text-align: flex-start;
+    width: 120px;
+}
+
+.planet img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.planet p {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+.learn-more {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+}
+.purple {
+   background-color: #581c87;
+   transition: transform 1s;
+}
+.purple:hover {
+    background: #1eaaaf;
+    transform: scale(1.3);
+}
+.blue {
+    background: #2563eb;
+    transition: transform 1s;
+}
+.blue:hover {
+    background: #1eaaaf;
+    transform: scale(1.3);
+}
+.planet-venus .learn-more {
+    background: #2563eb; 
+    transition: transform 1s;
+}
+.planet-venus .learn-more:hover {
+    background: #1eaaaf; 
+    transform: scale(1.3);
+}
+
+
+
+
+/*.learn-more {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    transition:  0.3s;
+    color: white;
+}
+
+.purple {
+    background: #6b21a8;
+}
+
+.purple:hover {
+    background: #581c87;
+}
+
+.blue {
+    background: #2563eb;
+}
+
+.blue:hover {
+    background: #1e40af;
+}
+.planet-venus a{
+    font-size: 14px;
+    margin: 10px 0 5px;
+    background-color: #2563eb;
+    color: white;
+}*/
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    font-size: 14px;
+    color: #888;
+}
+ @media screen and (min-width: 900px) and (max-width: 900px) {
+     /* Adjust navigation */
+    .navbar {
+        flex-direction: column; /* Stack items */
+        text-align: center;
+        padding: 90px 0;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+    /* Adjust hero section */
+     .hero {
+        text-align: left;
+        padding: 30px 10px;
+    }
+
+     .hero-content h2 {
+        font-size: 2rem; /* Resize heading */
+    }
+
+     .hero-content p {
+        font-size: 1rem;
+    }
+
+    /*Scale images for tablets */
+     .milky img {
+        width: 100%; /* Make sure background spans full width */
+        height: 700px;
+    }
+
+    /*Adjust planet grid */
+      .planet-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns instead of 2 */
+        gap: 10px;
+    }
+     .planet img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+     }
+     .planet-venus a{
+        font-size: 16px;
+        margin: 10px 0 5px;
+        background-color: #2563eb;
+        color: white;
+     }
+     .planet-earth a{
+        font-size: 16px;
+        margin: 10px 0 5px;
+        background-color: #2563eb;
+        color: white;
+    } 
+    .planet-mars a{
+        font-size: 16px;
+        margin: 10px 0 5px;
+        background-color: #6b21a8;;
+        color: white;
+    }
+    /* Footer */
+     .footer {
+        text-align: center;
+        padding: 15px;
+    }
+}
+    /* Responsive for Mobile (below 400px) */
+@media screen and (max-width: 400px) {
+    /* Adjust navigation */
+    .navbar {
+        flex-direction: column; /* Stack items */
+        text-align: center;
+        padding: 90px 0;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Adjust hero section */
+     .hero {
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+     .hero-content h2 {
+        font-size: 2rem; /* Resize heading */
+    }
+
+     .hero-content p {
+        font-size: 1rem;
+    }
+
+    /*Scale images for phone */
+     .milky img {
+        width: 100%; /* Make sure background spans full width */
+        height: 800px;
+    }
+
+    .planet-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* 1 columns instead of 2 */
+        gap: 10px;
+    }
+    .planet img {
+        width: 250px;
+        height: 250px;
+    }
+    .planet h3 {
+        font-size: 14px;
+    }
+    .button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    .planet-venus a{
+        font-size: 16px;
+        margin: 10px 0 5px;
+        background-color: #2563eb;
+        color: white;
+    }
+    .planet-earth a{
+        font-size: 16px;
+        margin: 10px 0 5px;
+        background-color: #2563eb;
+        color: white;
+    } 
+    .planet-mars a{
+        font-size: 16px;
+        margin: 10px 0 5px;
+        background-color: #6b21a8;;
+        color: white;
+    }
+    }
